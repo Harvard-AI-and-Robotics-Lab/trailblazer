@@ -1,0 +1,31 @@
+helper_model: gpt-3.5-turbo
+judge_model: gpt-4o
+reward:
+  encoder: BAAI/bge-large-en-v1.5
+  reference_file: datasets/processed_unalign.csv
+  train_success_threshold: 0.7
+ppo:
+  algo: ppo
+  clip_param: 0.2
+  ppo_epoch: 4
+  num_steps: 32
+  num_env_steps: 6000
+  num_processes: 4
+  lr: 0.0006
+  gamma: 0.999
+  value_loss_coef: 0.5
+  entropy_coef: 0.01
+trailblazer:
+  seqattn: simple
+  attention_weight_mode: learned
+  history_size_default: 4
+  history_size_llama32_11b: 5
+  use_step_improvement: false
+inference:
+  max_query: 10000
+  max_attempts_per_question: 50
+  top_template_pool_K: 1000
+  use_checkpoint: best.pt
+datasets:
+  advbench_train_size: 364
+  advbench_test_size: 156

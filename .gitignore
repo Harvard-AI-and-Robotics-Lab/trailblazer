@@ -1,0 +1,86 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+a2c_ppo_acktr/__pycache__/
+llm_utils/__pycache__/
+
+# Large result files and directories
+datasets/eval/
+datasets/prompts_generated/
+ASR/
+trained_models/ppo/
+trained_models/ppo_seq/
+attention_plots/
+deprecated/
+
+# Result files
+*.csv
+*.json
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.pt
+
+# Logs and temporary files
+*.log
+*.tmp
+*.out
+wandb/
+tensorboard_logs/
+logs/
+runs/
+reports/*
+
+!datasets/
+!datasets/README.md
+!datasets/**/
+!datasets/**/.gitkeep
+!trained_models/
+!trained_models/ppo_seq/
+!trained_models/ppo_seq/.gitkeep
+!logs/
+!logs/.gitkeep
+!reports/
+!reports/.gitkeep
+
+# API keys and sensitive data
+.env
+*.key
+secrets/
+
+# Shell scripts (optional - uncomment if needed)
+# *.sh
+test.py
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Model cache directories
+.cache/
+huggingface_cache/
+
+# Large data files
+*.zip
+*.tar.gz
+*.rar
