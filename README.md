@@ -1,34 +1,34 @@
+<h1 align="center">TrailBlazer:<br>History-Guided Reinforcement Learning for<br>Black-Box LLM Jailbreaking</h1>
+
 <p align="center">
-  <h1 align="center">TrailBlazer:<br>History-Guided Reinforcement Learning for<br>Black-Box LLM Jailbreaking</h1>
-  <p align="center">
-    <strong>Sung-Hoon Yoon</strong><sup>*</sup>
-    ·
-    <strong>Ruizhi Qian</strong><sup>*</sup>
-    ·
-    <strong>Minda Zhao</strong><sup>*</sup>
-    ·
-    <strong>Weiyue Li</strong><sup>*</sup>
-    ·
-    <strong>Mengyu Wang</strong><sup>†</sup>
-  </p>
-  <p align="center">
-    <sup>*</sup>Equal contribution. <sup>†</sup>Corresponding author.
-  </p>
-  <p align="center">
-    <strong><i>COLM 2026</i></strong>
-  </p>
-  <p align="center">
-    <i>Official repository for the COLM 2026 paper.</i>
-  </p>
+  <strong>Sung-Hoon Yoon</strong><sup>*</sup>
+  ·
+  <strong>Ruizhi Qian</strong><sup>*</sup>
+  ·
+  <strong>Minda Zhao</strong><sup>*</sup>
+  ·
+  <strong>Weiyue Li</strong><sup>*</sup>
+  ·
+  <strong>Mengyu Wang</strong><sup>†</sup>
 </p>
 
-<h3 align="center">
-  <a href="https://arxiv.org/abs/2602.06440"><strong>Paper</strong></a>
-  |
-  <a href="https://arxiv.org/pdf/2602.06440"><strong>PDF</strong></a>
-  |
-  <a href="https://github.com/Harvard-AI-and-Robotics-Lab/trailblazer"><strong>Code</strong></a>
-</h3>
+<p align="center">
+  <sup>*</sup>Equal contribution. <sup>†</sup>Corresponding author.
+</p>
+
+<p align="center">
+  <strong><i>COLM 2026</i></strong>
+</p>
+
+<p align="center">
+  <i>Official repository for the COLM 2026 paper.</i>
+</p>
+
+<p align="center">
+  <a href='https://arxiv.org/abs/2602.06440'><img src='https://img.shields.io/badge/Paper-ArXiv-red'></a>
+  <a href='https://arxiv.org/pdf/2602.06440'><img src='https://img.shields.io/badge/PDF-Download-orange'></a>
+  <a href='https://github.com/Harvard-AI-and-Robotics-Lab/trailblazer'><img src='https://img.shields.io/badge/Code-GitHub-black'></a>
+</p>
 
 ## 📚 Citation
 
