@@ -1,16 +1,58 @@
-# TrailBlazer
+<p align="center">
+  <h1 align="center">TrailBlazer:<br>History-Guided Reinforcement Learning for<br>Black-Box LLM Jailbreaking</h1>
+  <p align="center">
+    <strong>Sung-Hoon Yoon</strong><sup>*</sup>
+    ·
+    <strong>Ruizhi Qian</strong><sup>*</sup>
+    ·
+    <strong>Minda Zhao</strong><sup>*</sup>
+    ·
+    <strong>Weiyue Li</strong><sup>*</sup>
+    ·
+    <strong>Mengyu Wang</strong><sup>†</sup>
+  </p>
+  <p align="center">
+    <sup>*</sup>Equal contribution. <sup>†</sup>Corresponding author.
+  </p>
+  <p align="center">
+    <strong><i>COLM 2026</i></strong>
+  </p>
+  <p align="center">
+    <i>Official repository for the COLM 2026 paper.</i>
+  </p>
+</p>
 
-This repository contains the camera-ready implementation for **TrailBlazer: History-Guided Reinforcement Learning for Black-Box LLM Jailbreaking**.
+<h3 align="center">
+  <a href="https://arxiv.org/abs/2602.06440"><strong>Paper</strong></a>
+  |
+  <a href="https://arxiv.org/pdf/2602.06440"><strong>PDF</strong></a>
+  |
+  <a href="https://github.com/Harvard-AI-and-Robotics-Lab/trailblazer"><strong>Code</strong></a>
+</h3>
+
+## 📚 Citation
+
+If you find this repository useful, please cite:
+
+```bibtex
+@article{yoon2026trailblazer,
+  title={TrailBlazer: History-Guided Reinforcement Learning for Black-Box LLM Jailbreaking},
+  author={Yoon, Sung-Hoon and Qian, Ruizhi and Zhao, Minda and Li, Weiyue and Wang, Mengyu},
+  journal={arXiv preprint arXiv:2602.06440},
+  year={2026}
+}
+```
+
+## 📌 Overview
 
 TrailBlazer extends the RLbreaker search framework with sequence-aware state representations:
 
-- **RLbreaker baseline**: the policy observes only the current prompt-template embedding.
 - **HRL**: the policy observes the current embedding plus a fixed window of previous template embeddings, response features, rewards, and mutator IDs.
 - **AHRL / TrailBlazer**: a learned step-level attention module reweights the recent history before the PPO policy selects the next mutator.
 
 The code is intended for controlled red-team evaluation and robustness research. Do not use it to generate or deploy harmful content.
 
-## Repository Layout
+## 📁 Repository Layout
 
 ```text
 trailblazer/
@@ -27,7 +69,7 @@ trailblazer/
 └── datasets/                        # user-supplied data; generated files are ignored
 ```
 
-## Installation
+## 💻 Environment Setup
 
 ```bash
 conda create -n trailblazer python=3.9
@@ -44,7 +86,7 @@ export GEMINI_API_KEY="<YOUR_GEMINI_API_KEY>"          # optional
 export ANTHROPIC_API_KEY="<YOUR_ANTHROPIC_API_KEY>"    # optional
 ```
 
-## Data
+## 📦 Data
 
 Place the data files in the following structure:
 
@@ -76,7 +118,7 @@ python prepare_datasets.py \
   --seed 1
 ```
 
-## Camera-Ready Settings
+## ⚙️ Camera-Ready Settings
 
 The main paper configuration is:
 
@@ -96,7 +138,7 @@ The main paper configuration is:
 
 Important: `--history_size` is the HRL/AHRL history window. `--K` is the number of generated training templates loaded at inference time. They are different parameters.
 
-## Training
+## 🚀 Training
 
 AHRL / TrailBlazer on Qwen3-14B:
 
@@ -123,7 +165,7 @@ trained_models/ppo_seq/{env_name}_index{index}_final.pt
 
 Use `best.pt` for the paper-style inference unless you intentionally want the final policy snapshot.
 
-## Inference
+## 🔎 Inference
 
 ```bash
 python test_policy_seq.py \
@@ -148,7 +190,7 @@ datasets/eval/RL_{target_model_name}_{index}_responses_none.csv
 datasets/eval/RL_{target_model_name}_{index}_eval_none.csv
 ```
 
-## Evaluation
+## 📊 Evaluation
 
 Run GPT-4o judging on saved responses:
 
